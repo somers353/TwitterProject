@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Twitter Search</title>
+		<link href="css/twitter.css" rel="stylesheet" type="text/css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	</head>
+	<body>
+		<h2 id = "heading">Twitter Mapping and Analysis</h2>
+		<div id="nav">
+			<ul>
+				<li id="search"><a href="http://www.keithandnikkiswedding.com/TwitterV2/index.php">Search</a></li><li id="map"><a href="http://www.keithandnikkiswedding.com/TwitterV2/map.php">Map</a></li>
+			</ul>
+        </div>
+		<div id = "sidebar">
+			<img src = "<?= $_SESSION['image'] ?>" id = "user_pic">
+			<h2 id="username">@<?= $_SESSION['twitter_id'] ?></h2>
+			
+<?php
+	$tweets = $connection->get('https://api.twitter.com/1.1/statuses/home_timeline.json?count=20');
+	foreach($tweets as $tweet)
+	{
+		echo '<div id = "sideTweet"><img src = '.$tweet->user->profile_image_url.' id="tweet_pic">';
+		echo '<p style="margin-top: 13.5%; margin-bottom:1%;"><a href = "http://www.twitter.com/'.$tweet->user->screen_name.'">@'.$tweet->user->screen_name.'</a></p>';
+		$text = $tweet->text;
+		$text = preg_replace("#(^|[\n ])([\w]+?://[\w]+[^ \"\n\r\t< ]*)#", "\\1<a href=\"\\2\" target=\"_blank\">\\2</a>", $text);
+		$text = preg_replace("#(^|[\n ])((www|ftp)\.[^ \"\t\n\r< ]*)#", "\\1<a href=\"http://\\2\" target=\"_blank\">\\2</a>", $text);
+		$text = preg_replace("/@(\w+)/", "<a href=\"http://www.twitter.com/\\1\" target=\"_blank\">@\\1</a>", $text); // Usernames
+		$text = preg_replace("/#(\w+)/", "<a href=\"http://search.twitter.com/search?q=\\1\" target=\"_blank\">#\\1</a>", $text);
+		echo $text.'<br></div>';
+	}
+?>
+		</div>
+		

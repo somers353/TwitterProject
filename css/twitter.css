@@ -1,0 +1,211 @@
+body{
+	font-family: arial;
+}
+
+a{
+	text-decoration: none;
+	color: #317ee0;
+}
+
+#user_pic{
+	width:75%;
+	height:20%;
+	margin-left:12.5%;
+	margin-top: 2%;
+	border-radius: 10px;
+	float:left;
+}
+
+#username{
+	text-align:center;
+	color:#6CD9D9;
+}
+
+#sidebar{
+	width:15%;
+	background: #1e5799;
+	background: -moz-linear-gradient(left,  #1e5799 34%, #2989d8 94%, #7db9e8 100%, #207cca 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(34%,#1e5799), color-stop(94%,#2989d8), color-stop(100%,#7db9e8), color-stop(100%,#207cca));
+	background: -webkit-linear-gradient(left,  #1e5799 34%,#2989d8 94%,#7db9e8 100%,#207cca 100%);
+	background: -o-linear-gradient(left,  #1e5799 34%,#2989d8 94%,#7db9e8 100%,#207cca 100%);
+	background: -ms-linear-gradient(left,  #1e5799 34%,#2989d8 94%,#7db9e8 100%,#207cca 100%);
+	background: linear-gradient(to right,  #1e5799 34%,#2989d8 94%,#7db9e8 100%,#207cca 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=1 );
+
+	float:left;
+	position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+	left:0;
+}
+
+#sideTweet{
+	width:90%;
+	margin-left:4.5%;
+	background-color:white;
+	border-top:2px solid #A3C2C2;
+	border-left:2px solid #A3C2C2;
+	border-right:2px solid #A3C2C2;
+	border-radius: 10px;
+	float:left;
+	font-weight: 600;
+}
+
+#tweet_pic{
+	margin-left:2%;
+	margin-top:2%;
+	border-radius: 10px;
+	float:left;
+}
+
+#search_bar{
+	margin-left:49%;
+	margin-top: 2%;
+}
+
+#results{
+	margin-left:25%;
+}
+
+#heading{
+	margin-left:46.5%;
+	color: #317ee0;
+}
+
+#header{
+	color: #317ee0;
+}
+
+#frontBody{
+
+}
+
+#frontPage{
+	margin-top: 3%;
+	border: 2px solid black;
+	border-radius: 8px;
+	width: 40%;
+	margin-left: 30%;
+	padding-bottom: 1.5%;
+}
+
+#nav {
+   margin-left: 10%;
+   padding: .3em 0 .3em 0;
+
+   text-align: center;
+}
+
+#nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+#nav ul li {
+   margin: 0;
+   padding: 0;
+   display: inline;
+}
+
+#nav ul a:link{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #317ee0;
+}
+
+#nav ul a:visited{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #317ee0;
+}
+
+#nav ul a:active{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: blue;
+}
+
+#nav ul a:hover{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #6CD9D9;
+}
+
+#search_text{
+	background-color: #cccccc;
+	border: 0px;
+	padding: 8px 15px;
+	border-radius: 8px 0px 0px 8px;
+}
+
+#submit{
+position: relative;
+padding: 6px 15px;
+left: -8px;
+border: 1px solid #317ee0;
+border-radius: 8px;
+	background-color: #317ee0;
+	color:#6CD9D9;
+	font-weight: bold;
+}
+
+#map_canvas {
+	height: 60%;
+	width: 60%;
+	margin-top: 5%;
+	margin-left: 26%;
+	padding: 0px
+}
+
+#pos{
+	width: 80%;
+	background-color: #94FF94;
+	border-radius: 5px;
+	padding: 2%;
+	margin-top: 0.5%;
+	font-size: 18px;
+	border: 2px solid #33CC33;
+}
+
+#neg{
+	width: 80%;
+	background-color: #FF4D4D;
+	border-radius: 5px;
+	padding: 2%;
+	margin-top: 0.5%;
+	font-size: 18px;
+	border: 2px solid #FF0000;
+}
+
+#neutral{
+	width: 80%;
+	
+	border-radius: 5px;
+	padding: 2%;
+	margin-top: 0.5%;
+	font-size: 18px;
+	border: 2px solid grey;
+}
+
+#resultsInfo{
+	margin-right: 18%;
+	text-align: center;
+}
+
+.map_tweet{
+
+}
